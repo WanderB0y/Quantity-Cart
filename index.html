@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-javscript.svg">
+    <link rel="stylesheet" href="./style.css" class="style">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-primary-400">
+            <main class="container | bg-primary-400 | text-neutral-900 | section-one">
+            <p class="fw-900 | border-transparent-hover">Cart quantity</p>
+
+            <div class="fw-600">
+                <button onclick="console.log(`Cart Quantity :: ${cartQuantity}`);
+                            document.getElementById(`show`).innerHTML = cartQuantity;">Show Quantity</button>
+
+
+                <button onclick="cartQuantity++; 
+                             console.log(`Cart Quantity  :: ${cartQuantity}`);
+                            document.getElementById(`show`).innerHTML = cartQuantity;">Add to Cart</button>
+
+
+                <button onclick="cartQuantity += 2;
+                            console.log(`Cart Quantity :: ${cartQuantity}`);
+                            document.getElementById(`show`).innerHTML = cartQuantity;" >+2</button>
+                    
+                <button onclick="cartQuantity += 3;
+                                console.log(`Cart Quantity :: ${cartQuantity}`);
+                                document.getElementById(`show`).innerHTML = cartQuantity;">+3</button>
+
+                <button onclick="cartQuantity = 0;
+                                 console.log(`Cart Quantity has been reset to :: ${cartQuantity}`);
+                                 document.getElementById(`show`).innerHTML = cartQuantity; ">Reset Cart</button>
+            </div>
+            <div class="show-quantity | fw-700 fs-600 | border-transparent-hover">
+                Cart Quantity : 
+                <div id="show" class="fw-800"></div>
+        </div>
+    </main>
+</body>
+</html>
